@@ -1,4 +1,4 @@
-let billetter = [];
+const billetter = [];
 
 function kjoopBillett () {
 
