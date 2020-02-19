@@ -2,10 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Oblig1 - s315274</title>
     <script src="JavaScript.js"></script>
 </head>
 <body>
+    <h1>Bestilling av kinobilletter</h1>
+    <tr><td><strong>Velg film:</strong> <select id="velgFilm">
+        <option>1917</option>
+        <option>Birds of prey</option>
+        <option>Parasite</option>
+    </select>
+    </td></tr>
+    <br>
+    <br>
 
+    <tr><td><strong>Antall</strong></td><td> <input type="text" size="1" id="antall"/></td></tr>
+    <br>
+    <br>
+
+    <table>
+        <tr><td><strong>Fornavn</strong></td><td><input type="text" id="fornavn"/></td></tr>
+        <tr><td><strong>Etternavn</strong></td><td><input type="text" id="etternavn"/></td></tr>
+        <tr><td><strong>Telefonnr</strong></td><td><input type="text" id="nummer"/></td></tr>
+        <tr><td><strong>Epost</strong></td><td><input type="text" id="epost"/></td></tr>
+        <tr><td><button onclick="kjoopBillett()">Kjøp billett</button></td></tr>
+    </table>
+
+    <h3>Alle Billetter</h3>
+    <div id="billetter"></div>
+    <button onclick="slettBilletter()">Slett alle billettene</button>
 </body>
 </html>
