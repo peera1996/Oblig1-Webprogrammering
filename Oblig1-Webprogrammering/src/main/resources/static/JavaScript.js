@@ -9,7 +9,7 @@ let feilmeldinger = [];
         let antall = document.getElementById("antall").value;
         let fornavn = document.getElementById("fornavn").value;
         let etternavn = document.getElementById("etternavn").value;
-        let nummer = document.getElementById("nummer").value;
+        let telefonnr = document.getElementById("telefonnr").value;
         let epost = document.getElementById("epost").value;
 
 
@@ -20,7 +20,7 @@ let feilmeldinger = [];
             if (tomt[i].value == '') {
                 let j = i+1;
                 document.getElementById('feil-' + j).innerHTML = "Må skrive noe inn i " + tomt[i].id;
-                var tomInput = new Boolean(true); //brukte "var" her for å få tilgang til den i if(!tomInput)
+                var tomInput = Boolean(true); //brukte "var" her for å få tilgang til den i if(!tomInput)
                 feilmeldinger.push(tomt[i]);
             }
             // Denne gjør sånn at hvis du fyller ut feltet som var tomt, så forsvinner feilmeldingen
@@ -38,18 +38,18 @@ let feilmeldinger = [];
                 antall: antall,
                 fornavn: fornavn,
                 etternavn: etternavn,
-                nummer: nummer,
+                telefonnr: telefonnr,
                 epost: epost,
             };
             billetter.push(billett);
 
         // lager tabellen og Legger input-verdier inn i en tabell
         let ut = "<table><tr>" +
-            "<th id='th'>Film</th><th id='th'>Antall</th><th id='th'>Fornavn</th><th id='th'>Etternavn</th><th id='th'>telefonnr</th><th id='th'>epost</th>" +
+            "<th id='th'>Film</th><th id='th'>Antall</th><th id='th'>Fornavn</th><th id='th'>Etternavn</th><th id='th'>Telefonnr</th><th id='th'>Epost</th>" +
             "</tr>";
             for (let b of billetter) {
                 ut += "<tr>";
-                ut += "<td id='td'>" + b.film + "</td><td id='td'>" + b.antall + "</td><td id='td'>" + b.fornavn + "</td><td id='td'>" + b.etternavn + "</td><td id='td'>" + b.nummer + "</td><td id='td'>" + b.epost + "</td>";
+                ut += "<td id='td'>" + b.film + "</td><td id='td'>" + b.antall + "</td><td id='td'>" + b.fornavn + "</td><td id='td'>" + b.etternavn + "</td><td id='td'>" + b.telefonnr + "</td><td id='td'>" + b.epost + "</td>";
                 ut += "</tr>";
             }
 
@@ -62,7 +62,7 @@ let feilmeldinger = [];
         document.getElementById("antall").value="";
         document.getElementById("fornavn").value="";
         document.getElementById("etternavn").value="";
-        document.getElementById("nummer").value="";
+        document.getElementById("telefonnr").value="";
         document.getElementById("epost").value="";
     }
 
