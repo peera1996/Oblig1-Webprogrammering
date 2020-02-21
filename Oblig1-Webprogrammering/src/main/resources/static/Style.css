@@ -1,0 +1,8 @@
+/* Flytter hele diven med id skjema med 15px til høyere */
+#skjema {
+    margin-left: 15px;
+}
+/* gjør alle feilmeldingene med classe label rød  */
+.label {
+    color: red;
+}
