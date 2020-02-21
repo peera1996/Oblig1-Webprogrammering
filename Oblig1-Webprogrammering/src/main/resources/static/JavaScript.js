@@ -1,31 +1,31 @@
 // Et array for billettinfo og et for feilmeldinger
-var billetter = [];
-var feilmeldinger = [];
+let billetter = [];
+let feilmeldinger = [];
 
     function kjoopBillett() {
 
         // Legger det brukeren legger inn i inputfeltene i hver sin variabel
-        var film = document.getElementById('film').value;
-        var antall = document.getElementById("antall").value;
-        var fornavn = document.getElementById("fornavn").value;
-        var etternavn = document.getElementById("etternavn").value;
-        var nummer = document.getElementById("nummer").value;
-        var epost = document.getElementById("epost").value;
+        let film = document.getElementById('film').value;
+        let antall = document.getElementById("antall").value;
+        let fornavn = document.getElementById("fornavn").value;
+        let etternavn = document.getElementById("etternavn").value;
+        let nummer = document.getElementById("nummer").value;
+        let epost = document.getElementById("epost").value;
 
 
         // Legger inn feilmeldinger til det respektive feltet hvis
-        var tomt = document.getElementsByClassName('verdi');
-        var lengde = tomt.length;
-        for (var i = 0; i < lengde; i++) {
+        let tomt = document.getElementsByClassName('verdi');
+        let lengde = tomt.length;
+        for (let i = 0; i < lengde; i++) {
             if (tomt[i].value == '') {
-                var j = i+1;
+                let j = i+1;
                 document.getElementById('feil-' + j).innerHTML = "Må skrive noe inn i " + tomt[i].id;
-                var tomInput = new Boolean(true);
+                var tomInput = new Boolean(true); //brukte "var" her for å få tilgang til den i if(!tomInput)
                 feilmeldinger.push(tomt[i]);
             }
             // Denne gjør sånn at hvis du fyller ut feltet som var tomt, så forsvinner feilmeldingen
             else {
-                var j = i + 1;
+                let j = i + 1;
                 document.getElementById('feil-' + j).innerHTML = ""
             }
 
@@ -33,7 +33,7 @@ var feilmeldinger = [];
 
         // Denne koden kjører hvis alle inputfeltene ikke er tomme
         if (!tomInput) {
-            var billett = {
+            let billett = {
                 film: film,
                 antall: antall,
                 fornavn: fornavn,
@@ -45,11 +45,11 @@ var feilmeldinger = [];
 
         // lager tabellen og Legger input-verdier inn i en tabell
         let ut = "<table><tr>" +
-            "<th>Film</th><th>Antall</th><th>Fornavn</th><th>Etternavn</th><th>telefonnr</th><th>epost</th>" +
+            "<th id='th'>Film</th><th id='th'>Antall</th><th id='th'>Fornavn</th><th id='th'>Etternavn</th><th id='th'>telefonnr</th><th id='th'>epost</th>" +
             "</tr>";
             for (let b of billetter) {
                 ut += "<tr>";
-                ut += "<td>" + b.film + "</td><td>" + b.antall + "</td><td>" + b.fornavn + "</td><td>" + b.etternavn + "</td><td>" + b.nummer + "</td><td>" + b.epost + "</td>";
+                ut += "<td id='td'>" + b.film + "</td><td id='td'>" + b.antall + "</td><td id='td'>" + b.fornavn + "</td><td id='td'>" + b.etternavn + "</td><td id='td'>" + b.nummer + "</td><td id='td'>" + b.epost + "</td>";
                 ut += "</tr>";
             }
 

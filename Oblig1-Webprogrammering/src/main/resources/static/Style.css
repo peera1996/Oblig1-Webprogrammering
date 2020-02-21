@@ -6,3 +6,13 @@
 .label {
     color: red;
 }
+
+/*Gir mer plass mellom td taggene med id=td  */
+#td {
+    padding: 10px;
+}
+
+/*Gir mer plass mellom th taggene med id=th  */
+#th {
+    padding: 10px;
+}
