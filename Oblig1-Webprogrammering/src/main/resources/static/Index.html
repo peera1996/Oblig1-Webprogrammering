@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Oblig1 - s315274</title>
@@ -8,42 +9,41 @@
     <script src="JavaScript.js"></script>
     <link rel="stylesheet" href="Style.css">
 </head>
+
 <body>
 <div id="skjema">
-    <h1>Bestilling av kinobilletter</h1>
+    <h1 class="text-center">Bestilling av kinobilletter</h1>
+    <br>
+    <div class="container col-lg-5 text-center rounded bg-light">
 
-    <tr><td><strong>Velg film:</strong> <select class="verdi" id="film">
-        <option value="" selected disabled hidden>Velg film her</option>
-        <option value ="1917">1917</option>
-        <option value ="Birds of prey">Birds of prey</option>
-        <option value ="Parasite">Parasite</option>
-    </select>
-        <label class="label" id="feil-1"></label>
-    </td></tr>
+        <table class="table text-center">
+            <tr><td><strong>Velg film:</strong></td><td><select class="verdi form-control" id="film">
+                <option value="" selected disabled hidden>Velg film her</option>
+                <option value ="1917">1917</option>
+                <option value ="Birds of prey">Birds of prey</option>
+                <option value ="Parasite">Parasite</option>
+                <option value ="Flukten over grensen">Flukten over grensen</option>
+            </select>
+                <label class="label" id="feil-1"></label>
+            </td></tr>
+            <tr><td><strong>Antall</strong></td><td><input class="verdi form-control col-xs-2" type="text" size="1" id="antall"/>
+                <label class="label" id="feil-2"></label></td></tr>
+            <tr><td id="tdfornavn"><strong>Fornavn</strong></td><td><input class="verdi form-control" type="text" id="fornavn"/>
+                <label class="label" id="feil-3"></label></td></tr>
+            <tr><td><strong>Etternavn</strong></td><td><input class="verdi form-control" type="text" id="etternavn"/>
+                <label class="label" id="feil-4"></label></td></tr>
+            <tr><td><strong>Telefonnr</strong></td><td><input class="verdi form-control" type="text" id="telefonnr"/>
+                <label class="label" id="feil-5"></label></td></tr>
+            <tr><td><strong>Epost</strong></td><td><input class="verdi form-control" type="text" id="epost"/>
+                <label class="label" id="feil-6"></label></td></tr>
+        </table>
+        <tr><td><button class="btn btn-light btn btn-outline-dark" onclick="kjoopBillett()">Kjøp billett</button></td></tr>
+    </div>
     <br>
-    <br>
-
-    <tr><td><strong>Antall</strong></td><td> <input class="verdi" type="text" size="1" id="antall"/>
-        <label class="label" id="feil-2"></label></td></tr>
-    <br>
-    <br>
-
-    <table>
-        <tr><td><strong>Fornavn</strong></td><td><input class="verdi" type="text" id="fornavn"/>
-            <label class="label" id="feil-3"></label></td></tr>
-        <tr><td><strong>Etternavn</strong></td><td><input class="verdi" type="text" id="etternavn"/>
-            <label class="label" id="feil-4"></label></td></tr>
-        <tr><td><strong>Telefonnr</strong></td><td><input class="verdi" type="text" id="telefonnr"/>
-            <label class="label" id="feil-5"></label></td></tr>
-        <tr><td><strong>Epost</strong></td><td><input class="verdi" type="text" id="epost"/>
-            <label class="label" id="feil-6"></label></td></tr>
-        <tr><td><button onclick="kjoopBillett()">Kjøp billett</button></td></tr>
-    </table>
-    <br>
-
-    <h4>Alle Billetter</h4>
-    <div id="billetter"></div>
-    <button onclick="slettBilletter()">Slett alle billettene</button>
+    <div class="container col-lg-5 text-center  rounded bg-light">
+        <h4>Alle Billetter</h4>
+        <div id="billetter"></div>
+        <button class="btn btn-light btn btn-outline-dark" onclick="slettBilletter()">Slett alle billettene</button></div>
 </div>
 </body>
 </html>
