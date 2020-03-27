@@ -1,13 +1,13 @@
-package com.example.demo;
+package oblig2.webprogrammering;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Oblig1Application {
+public class WebprogrammeringApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(Oblig1Application.class, args);
+        SpringApplication.run(WebprogrammeringApplication.class, args);
     }
 
 }
